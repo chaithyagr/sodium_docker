@@ -1,0 +1,28 @@
+{
+	"dockerFile": "./Dockerfile",
+	"context": "..",
+	// Useful extensions.
+    "extensions": [
+        "ms-python.python@2021.12.1559732655",
+        "ms-vscode.cpptools",
+        "ms-vscode.makefile-tools",
+        "github.vscode-pull-request-github",
+        "github.copilot",
+        "zxh404.vscode-proto3"
+    ],
+	// Enable GPUs.
+	"runArgs": [
+		"--gpus=all"
+	],
+	// Enable plotting.
+	"mounts": [
+		"type=bind,source=/tmp/.X11-unix,target=/tmp/.X11-unix",
+		"type=bind,source=/volatile,target=/volatile/",
+		"type=bind,source=/neurospin,target=/neurospin/"
+	],
+	// Enable plotting.
+	"containerEnv": {
+		"DISPLAY": "${localEnv:DISPLAY}"
+	},
+	"remoteUser": "vscode"
+}

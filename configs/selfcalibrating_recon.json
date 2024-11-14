@@ -1,0 +1,46 @@
+{
+  "fourier_params": {
+    "kwargs": {
+      "implementation": "gpuNUFFT"
+    },
+    "init_class": "NonCartesianFFT"
+  },
+  "linear_params": {
+    "kwargs": {
+      "wavelet_name": "sym8",
+      "dim": 3,
+      "nb_scale": 2,
+      "padding_mode": "periodization"
+    },
+    "init_class": "WaveletN"
+  },
+  "smaps_params": {
+    "kwargs": {
+      "thresh": [0.1, 0.1, 0.1],
+      "mode": "NFFT"
+    }
+  },
+  "reconstructor_params": {
+    "kwargs": {
+      "verbose": 1,
+      "num_check_lips": 0,
+      "n_jobs": -1
+    },
+    "init_class": "SelfCalibrationReconstructor"
+  },
+  "optimizer_params": {
+    "kwargs": {
+      "optimization_alg": "fista",
+      "num_iterations": 15
+    }
+  },
+  "regularizer_params": {
+    "kwargs": {
+      "weights": 0
+    },
+    "init_class": "SparseThreshold"
+  },
+  "fov_shift_params": {
+    "shifts": [0, 0, 50]
+  }
+}

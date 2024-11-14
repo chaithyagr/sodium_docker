@@ -1,0 +1,17 @@
+{
+  "fourier_params": {
+     "kwargs": {
+      "implementation": "gpuNUFFT"
+    },
+    "init_class": "NonCartesianFFT"
+  },
+  "smaps_params": {
+    "kwargs": {
+      "thresh": [0.1, 0.1, 0.1],
+      "mode": "NFFT"
+    }
+  },
+  "fov_shift_params": {
+    "shifts": [0, 0, -10]
+  }
+}

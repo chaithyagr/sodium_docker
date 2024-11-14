@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "python",
+            "request": "launch",
+            "env": {
+                "PYTHONPATH": "/volatile/Chaithya/Environments/RenataEnv/lib64/python3.6/site-packages"
+            },
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--obs", "/neurospin/lrmn/people/Alfredo_Lopez/Sodium_Renata/RawData/meas_MID00137_FID15717_SPARK_AF32_4MM_V25.dat",
+                "--loc", "/neurospin/lrmn/people/Alfredo_Lopez/Sodium_Renata/Trajectories/dim3_i_RadialCO_P0.75_N74x74x74_FOV0.296x0.296x0.296_Nc23_Ns1247_c30_d2__D14M3Y2022T1128_reproject_v2_AF32.bin",
+                "--Ns", "1248",
+                "--img_size", "74x74x74",
+                "--n_average", "32",
+                "--outdir", "/neurospin/lrmn/people/Alfredo_Lopez/Sodium_Renata/ReconstructedData/Vol3_quant_AL_osf1_gpuNUFFT085",
+                "--gamma", "11268.0",
+                "--fov", "0.296x0.296x0.296"
+            ]
+        }
+    ]
+}
