@@ -18,9 +18,6 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 SHELL [ "/bin/bash", "-c" ]
 
-RUN apt-get update && \
-    apt-get install -y libcairo2-dev libgirepository1.0-dev libgtk-3-dev
-    
 # Install required libraries and python
 RUN apt-get update && \
     apt-get install -y libnfft3-dev vim build-essential software-properties-common libpython3.6-dev python3 wget python3-pip cmake qt5-default

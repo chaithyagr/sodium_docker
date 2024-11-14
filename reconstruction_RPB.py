@@ -30,7 +30,7 @@ def roll_ssim(ref, test, mask, roll=50):
 
 # Loading input data
 if __name__ == "__main__":
-    kspace_loc, kspace_data, out_dir, file, params = utils.load_input_from_args(
+    kspace_loc, kspace_data, out_dir, file, params, n_average = utils.load_input_from_args(
         load_params=True,
         params_file_kwargs={'file': 'selfcalibrating_recon.json'}
     )
